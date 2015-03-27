@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'HUGEAvantGardeBold';
+  src: url("/fonts/huge_agb_v5-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/huge_agb_v5-webfont.woff") format("woff"), url("/fonts/huge_agb_v5-webfont.ttf") format("truetype"), url("/fonts/huge_agb_v5-webfont.svg#svgFontName") format("svg");
+}
+@font-face {
+  font-family: 'Galaxie';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/GalaxieCopernicus-Book.eot?#iefix") format("embedded-opentype"), url("/fonts/GalaxieCopernicus-Book.woff") format("woff"), url("/fonts/GalaxieCopernicus-Book.svg#svgFontName") format("svg");
+}
+@font-face {
+  font-family: 'Galaxie';
+  font-style: italic;
+  font-weight: normal;
+  src: url("/fonts/GalaxieCopernicus-BookItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/GalaxieCopernicus-BookItalic.woff") format("woff"), url("/fonts/GalaxieCopernicus-BookItalic.svg#svgFontName") format("svg");
+}
+body {
+  color: #fff;
+}
+/* ESTILOS GENERALES */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  line-height: 3rem;
+  position: relative;
+}
+nav li ul {
+  position: absolute;
+}
+nav a {
+  color: #ddd;
+  display: block;
+  padding: 0 2.5em;
+  text-decoration: none;
+  transition: 0.4s;
+}
+nav a:hover {
+  background: rgba(0,0,0,0.5);
+}
+/* PRIMER NIVEL */
+nav > ul {
+  background: #333;
+  display: table;
+  width: 100%;
+}
+nav > ul > li {
+  float: left;
+}
+/* SEGUNDO NIVEL */
+nav li li {
+  background: #222;
+}
+nav > ul >li >ul {
+  top: 100%;
+}
+/* TERVER NIVEL */
+nav ul ul ul {
+  left: 100%;
+  top: 0;
+}
