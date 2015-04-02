@@ -1,34 +1,50 @@
 <!doctype html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>HUGE NavExercise</title>
+  <meta name="description" content="Huge Navigation Exercise">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-	<h1> NavExercise	</h1>	
-	<nav>
-		<ul>
-			<li><a href="#">Item 1</a></li>
-			<li><a href="#">Item 2</a>
-				<ul>
-					<li><a href="#">Subitem 1</a></li>
-					<li><a href="#">Subitem 2</a></li>
-					<li><a href="#">Subitem 3</a>
-						<ul>
-							<li><a href="#">Sub subitem 1</a></li>
-							<li><a href="#">Sub subitem 2</a></li>
-							<li><a href="#">Sub subitem 3</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Sub subitem 4</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Item 3</a></li>
-			<li><a href="#">Item 4</a></li>
-			<li><a href="#">Item 5</a></li>
-		</ul>
-	</nav>
+  <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <header class="header">
+    <!-- open and close icons -->
+    <a id="button-open"  class="icon-toggle-open left"></a>
+    <a id="button-close" class="icon-toggle-close right"></a>
+    <!-- HUGE LOGO -->
+    <figure id="huge-logo">
+      <a id="show-logo" href="www.hugeinc.com" target="_blank">
+        <img src="images/HUGE-white.png" alt="Huge", title="Huge">
+      </a>
+    </figure>
 
+    <section id="navegation">
+      <!-- MAIN NAV -->
+      <nav id="menu">
+        <ul id="items">
+        </ul>
+        <span class="copy-right">&#169; 2014 Huge. All Rights Reserved.</span>
+      </nav>
+    </section>
+  </header>
 
+  <section id="container">
+    <article id="magazine">
+      <div id="cover">
+      </div>
+      <h1 class="title"> Get paid for giving a shit. </h1>
+      <p id="content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore maiores, cum a. Neque, voluptas dolorum, tenetur repudiandae mollitia velit, ea facere explicabo consequatur ad alias molestias expedita magni dicta fugiat.
+      </p>
+      </div>
+    </article>
+  </section>
+
+    <script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 </html>

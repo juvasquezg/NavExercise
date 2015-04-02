@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 // Web server development
 gulp.task('server', function() {
   connect.server({
-    root: './app',
+    root: './public',
     hostname: '0.0.0.0',
     port: 8080,
     livereload: true,
@@ -22,35 +22,34 @@ gulp.task('server', function() {
   });
 });
 
-// Busca errores en el JS y nos los muestra por pantalla
+// Search javascripts errors
 gulp.task('jshint', function() {
-  return gulp.src('./app/scripts/**/*.js')
+  return gulp.src('./public/scripts/**/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(jshint.reporter('fail'));
 });
 
-// Preprocesa archivos Stylus a CSS y recarga los cambios
+// Compile Stylus to css
 gulp.task('css', function() {
-  gulp.src('./app/styles/main.styl')
+  gulp.src('./public/styles/main.styl')
     .pipe(stylus({ use: nib() }))
-    .pipe(gulp.dest('./app/styles'))
+    .pipe(gulp.dest('./public/styles'))
     .pipe(connect.reload());
 });
 
-// Recarga el navegador cuando hay cambios en el HTML
+// reload browser if HTML changed
 gulp.task('html', function() {
-  gulp.src('./app/**/*.html')
+  gulp.src('./public/**/*.html')
     .pipe(connect.reload());
 });
 
 
-// Vigila cambios que se produzcan en el código
-// y lanza las tareas relacionadas
+// watch
 gulp.task('watch', function() {
-  gulp.watch(['./app/**/*.html'], ['html']);
-  gulp.watch(['./app/styles/**/*.styl'], ['css']);
-  gulp.watch(['./app/scripts/**/*.js', './Gulpfile.js'], ['jshint']);
+  gulp.watch(['./public/**/*.html'], ['html']);
+  gulp.watch(['./public/styles/**/*.styl'], ['css']);
+  gulp.watch(['./public/scripts/**/*.js', './Gulpfile.js'], ['jshint']);
 });
 
 gulp.task('default', ['server', 'watch']);

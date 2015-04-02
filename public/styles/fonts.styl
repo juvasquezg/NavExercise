@@ -1,3 +1,5 @@
+// Fonts for Huge
+
 @font-face {
   font-family: 'HUGEAvantGardeBold';
   src: url("/fonts/huge_agb_v5-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/huge_agb_v5-webfont.woff") format("woff"), url("/fonts/huge_agb_v5-webfont.ttf") format("truetype"), url("/fonts/huge_agb_v5-webfont.svg#svgFontName") format("svg");
@@ -14,49 +16,35 @@
   font-weight: normal;
   src: url("/fonts/GalaxieCopernicus-BookItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/GalaxieCopernicus-BookItalic.woff") format("woff"), url("/fonts/GalaxieCopernicus-BookItalic.svg#svgFontName") format("svg");
 }
-body {
-  color: #fff;
+@font-face {
+  font-family: 'huge_jdvg_v1';
+  src:url('../fonts/huge_jdvg_v1.eot?wg53u7');
+  src:url('../fonts/huge_jdvg_v1.eot?#iefixwg53u7') format('embedded-opentype'),
+    url('../fonts/huge_jdvg_v1.woff?wg53u7') format('woff'),
+    url('../fonts/huge_jdvg_v1.ttf?wg53u7') format('truetype'),
+    url('../fonts/huge_jdvg_v1.svg?wg53u7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-/* ESTILOS GENERALES */
-nav ul {
-  list-style: none;
-  padding: 0;
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'huge_jdvg_v1';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-nav li {
-  line-height: 3rem;
-  position: relative;
+
+.icon-toggle-close:before {
+  content: "\e600";
 }
-nav li ul {
-  position: absolute;
-}
-nav a {
-  color: #ddd;
-  display: block;
-  padding: 0 2.5em;
-  text-decoration: none;
-  transition: 0.4s;
-}
-nav a:hover {
-  background: rgba(0,0,0,0.5);
-}
-/* PRIMER NIVEL */
-nav > ul {
-  background: #333;
-  display: table;
-  width: 100%;
-}
-nav > ul > li {
-  float: left;
-}
-/* SEGUNDO NIVEL */
-nav li li {
-  background: #222;
-}
-nav > ul >li >ul {
-  top: 100%;
-}
-/* TERVER NIVEL */
-nav ul ul ul {
-  left: 100%;
-  top: 0;
+
+.icon-toggle-open:before {
+  content: "\e601";
 }

@@ -1,0 +1,291 @@
+@import "nib"
+@import "normalize.styl"
+@import "fonts.styl"
+@import "colors.styl"
+
+// Mobile First
+
+vendor-prefixes = webkit o ms moz official
+
+body
+  font-size 16px
+  font-family Helvetica Neue, Helvetica
+// COMMON STYLES
+a
+  text-decoration none
+  outline 0
+h1,h2,h3,h4,h5,h6,figure
+  margin 0
+  padding 0
+img
+  vertical-align top
+ul
+  margin 0
+  padding 0
+// Header Icon Fonts
+.icon-toggle-open
+  color hg_white
+  // display none
+.icon-toggle-close
+  color hg_white
+// OOCSS classes
+.relative
+  position relative
+.wrap
+  width 1000px
+.left
+  float left
+.right
+  float right
+.slice-nav
+  margin-left 300px
+.show-nav
+  margin-top 60px
+.hidden-block
+  display none
+.total-height
+  height 100%
+
+// Mobile Header
+header
+  background hg_magenta
+  height 60px
+  margin 0
+  position fixed
+  width 100%
+  #huge-logo, #button-close
+    padding 20px 24px
+    vertical-align middle
+    display none
+    &:hover
+      cursor pointer
+  #button-close, #button-open
+    font-size 20px
+    position relative
+  #button-open
+    padding 20px 24px
+    &:hover
+      cursor pointer
+
+  #huge-logo
+    height 20px
+    padding 20px 24px
+    width 50px
+    a
+      display block
+      height 20px
+      width 50px
+    img
+      height 20px
+      width 50px
+
+  // Mobile Navegation
+  #navegation
+    // MENU COMMON STYLES
+    background hg_white
+    display none
+    padding-top 12px
+    transition all .2s ease-in-out
+    width 300px
+    #menu
+      ul
+        list-style none
+        ul
+          display block
+      li
+        line-height 48px
+      a
+        color hg_black
+        display block
+        font-family HUGEAvantGardeBold
+        font-size 21px
+        padding 0 24px
+        transition .4s
+        &:hover
+          background hg_light_gray
+    // FIRST LEVEL
+    #menu > ul
+      background hg_main
+      display table
+      width 100%
+      > li
+        // float left
+    // // SECOND LEVEL
+    #menu li li
+      background hg_white
+      line-height 48px
+      max-height 0
+      overflow hidden
+      width 100%
+      a
+        color hg_black
+        font-family Galaxie
+        font-size 1 rem
+        height 48px
+        padding-top 12px
+        &:hover
+          color hg_magenta
+          background hg_light_gray
+      // &:hover
+      //     background hg_light_gray
+      //     #menu li
+      //       background hg_white
+    #menu li:hover > ul > li
+      max-height 100px
+      overflow visible
+    #menu > li > ul
+      top 100%
+    // Copy right
+    .copy-right
+      color hg_black
+      font-size 12px
+      left 24px
+      line-height 16px
+      position relative
+      display block
+      padding-top 20%
+
+// Mobile Container
+#container
+  margin-left 0
+  padding-top 60px
+  #magazine
+    width 100%
+    #cover
+      background url('../images/background-image.jpg')
+      background-repeat no-repeat
+      background-size cover
+      height 240px
+      width 100%
+    h1
+      color hg_black
+      font 20vmin/1 HUGEAvantGardeBold
+      font-size 44px
+      line-height 48px
+      padding-left 24px
+      padding-top 50px
+      // top 110%
+    #content
+      text-align justify
+      padding 50px 24px 0px 24px
+      font-family Galaxie
+      font-size 14px
+      line-height 24px
+      margin 0
+
+
+
+// Media Query Desktop
+@media screen and (min-width: 768px)
+  // Desktop Header
+  header
+    height 72px
+    position fixed
+    .show-menu
+      display none
+    #button-close, #button-open
+      display none !important
+    #huge-logo
+      // display block !important
+      height 24px
+      padding 24px 24px
+      width 60px
+      position absolute
+      display block !important
+      a
+        display block
+        height 24px
+        width 60px
+      img
+        height 23px
+        width 60px
+    #huge-logo, #navegation
+      display inline-block
+    // Desktop Navegation
+    #navegation
+      // MENU COMMON STYLES
+      margin-top 0 !important
+      display block !important
+      padding-top 0px
+      background hg_magenta
+      width 100%
+      margin-left 132px
+      #menu
+        ul
+          list-style none
+        li
+          line-height 72px
+          position relative
+          li
+            // display none
+          &:hover
+            background hg_white
+            > a
+              color hg_magenta
+          ul
+            position absolute
+        a
+          color hg_white
+          cursor pointer
+          display block
+          font-family HUGEAvantGardeBold
+          font-size 21px
+          padding 0 24px
+          transition .4s
+          &:hover
+            background hg_white
+      // FIRST LEVEL
+      #menu > ul
+        background hg_magenta
+        display table
+        width 100%
+        > li
+          float left
+      // SECOND LEVEL
+      #menu li li
+        width 240px
+      #menu ul li ul
+        z-index 1
+      // Copy right
+      .copy-right
+        display none
+
+  #container
+    padding-top 72px
+    padding-bottom 0px
+    margin-left 0px !important
+    #magazine
+      width 100%
+      padding 0
+      margin 0
+      #cover
+        height 640px
+        width 100%
+        z-index -1
+        position absolute
+      h1
+        position absolute
+        top 50%
+        left 50%
+        -webkit-transform translate(-50%, -50%)
+        transform translate(-50%, -50%)
+        margin 0
+        letter-spacing -0.06em
+        text-align center
+        font-size 120px
+        line-height 132px
+        color hg_white
+        z-index -1
+        width 50%
+        padding 0
+      #content
+        text-align justify
+        padding 54px 132px 0px 132px
+        font-family Galaxie
+        font-size 14px
+        line-height 24px
+        margin 0
+        border 1px solid hg_black
+        position absolute
+        z-index -1
+        top 712px
