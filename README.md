@@ -12,9 +12,7 @@ Technology
 | ------------- | -------------- | ----------- |
 | express       | javascript     | Gulp        |
 |               | stylus         | livereload  |
-|               |                |             |
-|               |                |             |
-|               |                |             |
+
 
 Requirements
 ------------

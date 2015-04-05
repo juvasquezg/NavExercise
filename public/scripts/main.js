@@ -37,7 +37,7 @@
 				callback(null, items);
 			}
 		};
-		xhr.open('GET', 'nav.json', true);
+		xhr.open('GET', '/api/nav.json', true);
 		xhr.send();
 	}
 
