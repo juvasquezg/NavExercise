@@ -46,6 +46,7 @@ ul
 .total-height
   height 100%
 
+
 // Mobile Header
 header
   background hg_magenta
@@ -91,7 +92,7 @@ header
       ul
         list-style none
         ul
-          display block
+          display none
       li
         line-height 48px
       a
@@ -110,11 +111,11 @@ header
       width 100%
       > li
         // float left
-    // // SECOND LEVEL
+    // SECOND LEVEL
     #menu li li
       background hg_white
       line-height 48px
-      max-height 0
+      max-height 100px
       overflow hidden
       width 100%
       a
@@ -126,13 +127,6 @@ header
         &:hover
           color hg_magenta
           background hg_light_gray
-      // &:hover
-      //     background hg_light_gray
-      //     #menu li
-      //       background hg_white
-    #menu li:hover > ul > li
-      max-height 100px
-      overflow visible
     #menu > li > ul
       top 100%
     // Copy right
@@ -144,6 +138,14 @@ header
       position relative
       display block
       padding-top 20%
+
+#translucent
+  z-index 0
+  background-color rgba(0, 0, 0, 0.5)
+  position fixed
+  height 100%
+  width 100%
+  display none
 
 // Mobile Container
 #container
@@ -181,6 +183,7 @@ header
   header
     height 72px
     position fixed
+    z-index 1
     .show-menu
       display none
     #button-close, #button-open
@@ -244,8 +247,6 @@ header
       // SECOND LEVEL
       #menu li li
         width 240px
-      #menu ul li ul
-        z-index 1
       // Copy right
       .copy-right
         display none
@@ -282,8 +283,8 @@ header
         text-align justify
         padding 54px 132px 0px 132px
         font-family Galaxie
-        font-size 14px
-        line-height 24px
+        font-size 24px
+        line-height 36px
         margin 0
         border 1px solid hg_black
         position absolute

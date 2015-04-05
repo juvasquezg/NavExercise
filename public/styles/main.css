@@ -518,7 +518,7 @@ header #navegation #menu ul {
   list-style: none;
 }
 header #navegation #menu ul ul {
-  display: block;
+  display: none;
 }
 header #navegation #menu li {
   line-height: 48px;
@@ -546,7 +546,7 @@ header #navegation #menu > ul {
 header #navegation #menu li li {
   background: #fff;
   line-height: 48px;
-  max-height: 0;
+  max-height: 100px;
   overflow: hidden;
   width: 100%;
 }
@@ -561,10 +561,6 @@ header #navegation #menu li li a:hover {
   color: #ec008c;
   background: #eee;
 }
-header #navegation #menu li:hover > ul > li {
-  max-height: 100px;
-  overflow: visible;
-}
 header #navegation #menu > li > ul {
   top: 100%;
 }
@@ -576,6 +572,14 @@ header #navegation .copy-right {
   position: relative;
   display: block;
   padding-top: 20%;
+}
+#translucent {
+  z-index: 0;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: none;
 }
 #container {
   margin-left: 0;
@@ -613,6 +617,7 @@ header #navegation .copy-right {
   header {
     height: 72px;
     position: fixed;
+    z-index: 1;
   }
   header .show-menu {
     display: none;
@@ -692,9 +697,6 @@ header #navegation .copy-right {
   header #navegation #menu li li {
     width: 240px;
   }
-  header #navegation #menu ul li ul {
-    z-index: 1;
-  }
   header #navegation .copy-right {
     display: none;
   }
@@ -738,8 +740,8 @@ header #navegation .copy-right {
     text-align: justify;
     padding: 54px 132px 0px 132px;
     font-family: Galaxie;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 36px;
     margin: 0;
     border: 1px solid #000;
     position: absolute;
