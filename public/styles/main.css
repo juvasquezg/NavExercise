@@ -465,7 +465,8 @@ header {
   background: #ec008c;
   height: 60px;
   margin: 0;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
   width: 100%;
 }
 header #huge-logo,
@@ -580,6 +581,7 @@ header #navegation .copy-right {
   height: 100%;
   width: 100%;
   display: none;
+  top: 0;
 }
 #container {
   margin-left: 0;
@@ -612,6 +614,16 @@ header #navegation .copy-right {
   font-size: 14px;
   line-height: 24px;
   margin: 0;
+}
+.down:after {
+  content: url("../images/down.png");
+  position: absolute;
+  left: 252px;
+}
+.up:after {
+  content: url("../images/up.png");
+  position: absolute;
+  left: 252px;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -747,5 +759,9 @@ header #navegation .copy-right {
     position: absolute;
     z-index: -1;
     top: 712px;
+  }
+  #container #magazine .up:after,
+  #container #magazine .down:after {
+    display: none;
   }
 }

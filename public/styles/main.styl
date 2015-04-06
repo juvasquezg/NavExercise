@@ -52,7 +52,8 @@ header
   background hg_magenta
   height 60px
   margin 0
-  position fixed
+  position absolute
+  z-index 1
   width 100%
   #huge-logo, #button-close
     padding 20px 24px
@@ -146,6 +147,7 @@ header
   height 100%
   width 100%
   display none
+  top 0
 
 // Mobile Container
 #container
@@ -166,7 +168,6 @@ header
       line-height 48px
       padding-left 24px
       padding-top 50px
-      // top 110%
     #content
       text-align justify
       padding 50px 24px 0px 24px
@@ -176,6 +177,17 @@ header
       margin 0
 
 
+.down:after {
+  content: url('../images/down.png');
+  position: absolute;
+  left: 252px;
+}
+
+.up:after {
+  content: url('../images/up.png');
+  position: absolute;
+  left: 252px;
+}
 
 // Media Query Desktop
 @media screen and (min-width: 768px)
@@ -290,3 +302,5 @@ header
         position absolute
         z-index -1
         top 712px
+      .up:after, .down:after
+        display none
