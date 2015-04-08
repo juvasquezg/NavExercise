@@ -26,9 +26,9 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
-# Tab indentation (no size specified)
+# space indentation (no size specified)
 [*.js]
-indent_style = tab
+indent_style = space
 
 # Indentation override for all JS under lib directory
 [lib/**.js]
